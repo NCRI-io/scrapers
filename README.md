@@ -21,6 +21,20 @@ pip install pandas
 ```
 
 ## Usage
+
+### Importing:
+```python
+from twitter_scraper import getNamedTweets
+
+from redditsubmissions_scraper import get_posts
+from redditcomments_scraper import get_comments
+# datetime import needed for reddit scrapers
+from datetime import datetime, timezone
+
+from fb_scraper import scrape_comments
+from fb_scraper import scrape_posts
+```
+
 ### Twitter:
 ```python
 df = getNamedTweets(keyword = 'ncri_io', start_date = '2022-3-1', end_date = '2022-3-15')
