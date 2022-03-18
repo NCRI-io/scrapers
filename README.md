@@ -26,10 +26,10 @@ pip install pandas
 ```python
 # Twitter
 from twitter_scraper import getNamedTweets
+
 # Reddit
 from redditsubmissions_scraper import get_posts
 from redditcomments_scraper import get_comments
-# datetime import needed for reddit scrapers
 from datetime import datetime, timezone
 
 # Facebook
