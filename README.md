@@ -36,6 +36,8 @@ from datetime import datetime, timezone
 from fb_scraper import scrape_comments
 from fb_scraper import scrape_posts
 ```
+### Cookies:
+The Facebook scraper requires cookies to be passed in as an argument. To collect cookies in chrome download this [cookies extension](https://chrome.google.com/webstore/detail/get-cookiestxt/bgaddhkoddajcdgocldbbfleckgcbcid). To collect cookies in Firefox download this [cookies extension](https://addons.mozilla.org/en-US/firefox/addon/cookie-quick-manager/). Make sure that you include both the c_user cookie and the xs cookie, you will get an InvalidCookies exception if you don't.
 
 ### Twitter:
 ```python
