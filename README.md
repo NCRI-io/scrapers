@@ -6,8 +6,6 @@ This repository is a collection of web scraping tools used for Reddit, Twitter, 
 Use the package manager [pip](https://pip.pypa.io/en/stable/) to install the required packages.
 ### Required Packages:
 pandas\
-time\
-json\
 requests\
 datetime\
 pickle\
