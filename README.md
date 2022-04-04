@@ -41,6 +41,8 @@ The Facebook scraper requires cookies to be passed in as an argument. To collect
 ### Twitter:
 ```python
 df = getNamedTweets(keyword = 'ncri_io', start_date = '2022-3-1', end_date = '2022-3-15')
+
+df = getUserTweets(name = 'ncri_io')
 ```
 ### Reddit Posts:
 ```python
