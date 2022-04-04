@@ -21,5 +21,19 @@ def getNamedTweets(keyword, start_date, end_date):
     tweets_df1 = pd.DataFrame(tweets_list1, columns=['Datetime', 'Username', 'Tweet Id', 'Text', 'URL', 'replyCount', 'retweetCount', 'likeCount', 'quoteCount', 'isQuoted', 'Mentioned Users', 'Links']
 
 )
+    return tweets_df1
+
+def getUserTweets(name):
+    tweets_list1 = []
     
+    name = 'from:' + name
+    print(name)
+
+    # Using TwitterSearchScraper to scrape data and append tweets to list
+    for i,tweet in enumerate(sntwitter.TwitterSearchScraper(name).get_items()): #declare a username 
+        
+        tweets_list1.append([tweet.date, tweet.username, tweet.id, tweet.content, tweet.url, tweet.replyCount, tweet.retweetCount, tweet.likeCount, tweet.quoteCount, tweet.quotedTweet, tweet.mentionedUsers, tweet.outlinks]) #declare the attributes to be returned
+    
+    # Creating a dataframe from the tweets list above 
+    tweets_df1 = pd.DataFrame(tweets_list1, columns=['Datetime', 'Username', 'Tweet Id', 'Text', 'URL', 'replyCount', 'retweetCount', 'likeCount', 'quoteCount', 'isQuoted', 'Mentioned Users', 'Links'])
     return tweets_df1
