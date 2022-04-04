@@ -24,6 +24,7 @@ pip install pandas
 ```python
 # Twitter
 from twitter_scraper import getNamedTweets
+from twitter_scraper import getUserTweets
 
 # Reddit
 from redditsubmissions_scraper import get_posts
