@@ -88,7 +88,7 @@ words_list = ['']
 comments_filtered = comments[comments['comment_text'].str.contains('|'.join(words_list))]
 ```
 
-### Scihub documents
+### Scihub:
 Enter the name of the doi file to be scraped in the "doi" variable. Ensure the "out" variable is set to the desired location for pdfs to be downloaded. Keep the scraper frequency around 500 to prevent running into the websites CAPTCHA. 
 
 ```python
