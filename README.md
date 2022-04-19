@@ -93,6 +93,9 @@ Enter the name of the doi file to be scraped in the "doi" variable. Ensure the "
 
 ```python
 doi = open('doi_file.txt', 'r')
+lines = doi.read()
+doi_list = lines.splitlines()
+doi.close()
 
 i = 0
 for doi in doi_list:
