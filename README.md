@@ -87,3 +87,21 @@ For posts replace the appropriate comment variables with post variables.
 words_list = ['']
 comments_filtered = comments[comments['comment_text'].str.contains('|'.join(words_list))]
 ```
+
+### Scihub documents
+Enter the name of the doi file to be scraped in the "doi" variable. Ensure the "out" variable is set to the desired location for pdfs to be downloaded. Keep the scraper frequency around 500 to prevent running into the websites CAPTCHA. 
+
+```python
+doi = open('doi_file.txt', 'r')
+
+i = 0
+for doi in doi_list:
+    paper = ("https://doi.org/" + doi)
+    paper_type = "doi"
+    out = ("./journals/post_colonial/critical_inquiry/")
+    scihub_download(paper, paper_type=paper_type, out=out)
+    i+=1
+    time.sleep(10)
+    if i == 501:
+        break
+```
